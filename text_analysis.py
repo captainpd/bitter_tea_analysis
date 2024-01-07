@@ -1,7 +1,5 @@
 import os
 
-list_word_countries = ['朝鲜', '美国', '台湾', '巴西', '以色列', '乌克兰', '意大利']
-
 
 def word_count(files_folder, list_words):
     result = {}
@@ -21,10 +19,11 @@ def word_count(files_folder, list_words):
                         count_old = result.get(word, 0)
                         result[word] = count_old + 1
 
-    print(f"Through {len(list_files)} files, {num_lines} lines | Result: {result}")
+    print(f"Finished -> Through {len(list_files)} files, {num_lines} lines")
 
     return result
 
 
 if __name__ == '__main__':
+    list_word_countries = ['朝鲜', '美国', '台湾', '巴西', '以色列', '乌克兰', '意大利']
     word_count(files_folder=r"data\news", list_words=list_word_countries)
