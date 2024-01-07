@@ -23,7 +23,7 @@ def fetch_and_parse_url(url):
         return None
 
 
-def fetch_news(save_folder: str = "data\news"):
+def fetch_news(save_folder: str = r"data\news"):
     for i in range(1, 1000):
         # do not fetch too frequently
         time.sleep(0.5)
