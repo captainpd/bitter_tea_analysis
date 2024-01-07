@@ -23,10 +23,10 @@ def fetch_and_parse_url(url):
         return None
 
 
-def fetch_news(save_folder: str = r"data\news"):
+def fetch_news(save_folder: str = r"data\news", interval_time=0.3):
     for i in range(1, 1000):
         # do not fetch too frequently
-        time.sleep(0.5)
+        time.sleep(interval_time)
 
         # Fetch and parse the URL
         url_fear_nation = url_basic if i == 1 else url_page + str(i)
