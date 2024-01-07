@@ -44,10 +44,13 @@ def fetch_news(save_folder: str = r"data\news"):
             post_date = datetime.strptime(post_date_raw, '%b %d, %Y').strftime('%Y-%m-%d')
             post_save_name = post_date + ".txt"
             # Check already downloaded
-            list_downloaded = os.listdir(save_folder)
-            if post_save_name in list_downloaded:
-                print(f"{post_save_name} already exists")
-                continue
+            if os.path.isdir(save_folder):
+                list_downloaded = os.listdir(save_folder)
+                if post_save_name in list_downloaded:
+                    print(f"{post_save_name} already exists")
+                    continue
+            else:
+                os.mkdir(save_folder)
 
             print(f"fetching {post_save_name}")
             post_url = url_basic + post.find('a', class_='u-permalink').get('href')
