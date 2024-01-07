@@ -4,10 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-# Save folder
-save_folder = r"data\news"
 # Example URL
-url_basic = 'https://fearnation.club' # https://fearnation.club/page/3/
+url_basic = 'https://fearnation.club'  # https://fearnation.club/page/3/
 url_page = 'https://fearnation.club/page/'
 
 
@@ -25,7 +23,7 @@ def fetch_and_parse_url(url):
         return None
 
 
-def fetch_news():
+def fetch_news(save_folder: str = "data\news"):
     for i in range(1, 1000):
         # do not fetch too frequently
         time.sleep(0.5)
