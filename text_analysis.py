@@ -2,6 +2,9 @@ import os
 
 
 def word_count(files_folder, list_words):
+    if isinstance(list_words, str):
+        list_words = list_words.split(",")
+
     result = {}
     list_files = [os.path.join(files_folder, file) for file in os.listdir(files_folder)]
     num_lines = 0
@@ -25,7 +28,10 @@ def word_count(files_folder, list_words):
 
 
 def word_combine(files_folder, list_combine):
-    result = []
+    if isinstance(list_combine, str):
+        list_combine = list_combine.split(",")
+
+    result = {}
     list_files = os.listdir(files_folder)
     num_lines = 0
 
@@ -47,8 +53,7 @@ def word_combine(files_folder, list_combine):
                 if not all_in:
                     continue
                 else:
-                    file_line = f"{file_name} -> {line}"
-                    result.append(file_line)
+                    result[file_name] = line
 
     print(f"Finished -> Through {len(list_files)} files, {num_lines} lines")
 
