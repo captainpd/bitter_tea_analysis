@@ -1,6 +1,7 @@
 import os
 import time
 import requests
+from pathlib import Path
 from bs4 import BeautifulSoup
 from datetime import datetime
 
@@ -51,7 +52,8 @@ def fetch_news(save_folder: str = r"data\news", interval_time=0.3):
                     print(f"{post_save_name} already exists")
                     continue
             else:
-                os.mkdir(save_folder)
+                path_folder = Path(save_folder)
+                path_folder.mkdir(parents=True, exist_ok=True)
 
             print(f"fetching {post_save_name}")
             post_url = url_basic + post.find('a', class_='u-permalink').get('href')
