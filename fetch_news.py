@@ -24,7 +24,7 @@ def fetch_and_parse_url(url):
         return None
 
 
-def fetch_news(save_folder: str = r"data\news", interval_time=0.3):
+def fetch_news(save_folder: str = r"data/news", interval_time=0.3):
     print(f"== Downloading news ==")
     for i in range(1, 1000):
         # do not fetch too frequently
