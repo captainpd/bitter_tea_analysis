@@ -12,5 +12,11 @@
 3. For fun :)
 
 ### How to use
-1. Follow requirements.txt to install necessary librarys
-2. run main.py directly
+#### With google colab(recommended)
+1. Click the colab page and `RUN ALL`
+
+#### With local computer
+1. Use cmd command `python -m venv venv` to create a virtual environment 
+2. Use cmd command `cd venv\Scripts\activate` to switch to virtual environment
+3. Use `pip install -r requirements.txt` to install all necessary packages
+4. Use cmd command `python main.py` to run the main script
