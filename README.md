@@ -9,7 +9,7 @@
 ### Purpose of the project
 1. To show how to use basic python methods for simple automation
 2. Demo for git tutorial
-3. For fun :)
+4. To read world bitter tea
 
 ### How to use
 #### With google colab(recommended)
