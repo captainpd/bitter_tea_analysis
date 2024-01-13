@@ -25,6 +25,12 @@ def fetch_and_parse_url(url):
 
 
 def fetch_news(save_folder: str = r"data/news", interval_time=0.3):
+    """
+    fetch news to local direction
+    Params:
+        save_folder: relative path to current file
+        interval_time: interval for downloading news (do not be too frequent to avoid web blocking)
+    """
     print(f"== Downloading news ==")
     for i in range(1, 1000):
         # do not fetch too frequently

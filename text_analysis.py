@@ -2,6 +2,14 @@ import os
 
 
 def word_count(files_folder, list_words):
+    """
+    count exact time for words appearance
+    Params:
+        files_folder: relative path to file folder
+        list_words: list of words to be counted
+    Outputs:
+        result: Dict with key of word, value of count
+    """
     if isinstance(list_words, str):
         list_words = list_words.split(",")
 
@@ -28,6 +36,14 @@ def word_count(files_folder, list_words):
 
 
 def word_combine(files_folder, list_combine):
+    """
+    count exact time for words-combine appearance
+    Params:
+        files_folder: relative path to file folder
+        list_combine: list of words to be combined
+    Outputs:
+        result: Dict with key of appear file name, value of combine news paragraph
+    """
     if isinstance(list_combine, str):
         list_combine = list_combine.split(",")
 
